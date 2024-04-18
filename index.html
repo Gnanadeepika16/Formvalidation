@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Form Validation</title>
+</head>
+<body>
+  <div class="form-container">
+    <form onsubmit="validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" onkeydown="return/[a-z A-Z]/i.test(event.key)" >
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" >
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" >
+
+      <label for="mobileNumber">Mobile Number:</label>
+      <input type="text" id="mobileNumber" name="mobileNumber" pattern="\d{10}" title="Please enter a 10-digit mobile number" >
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
